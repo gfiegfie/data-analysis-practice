@@ -1,0 +1,75 @@
+
+# 1. 创建一个空列表，用来存放所有成绩
+scores = []
+scores = [] 表示创建一个空的列表。列表就像一个篮子，后面我们可以用 append 把成绩放进去。
+
+
+# 2. 获取学生人数
+n = int(input("请输入学生人数："))
+input("请输入学生人数：") 会在屏幕上显示提示，等待用户输入。用户输入的内容是字符串（比如 "20"）。
+
+int() 把这个字符串转换成整数，这样我们才能进行数学运算（比如后面用来循环20次）。
+
+把转换后的整数赋值给变量 n。
+
+
+# 3. 循环 n 次，每次获取一个成绩
+for i in range(n):
+range(n) 会生成从 0 到 n-1 的整数序列。比如 n=20，就生成 0,1,2,...,19。
+
+for i in range(n): 表示对于这个序列中的每一个值，执行一次循环体。变量 i 依次等于 0,1,2,...,19。
+
+
+# 4. 提示输入第 i+1 个成绩，并转换为浮点数
+score = float(input(f"请输入第{i+1}个学生的成绩："))
+input(f"请输入第{i+1}个学生的成绩：") 这里用了 f-string（格式化字符串），{i+1} 会被替换成当前循环的序号（从1开始）。
+
+用户输入后得到字符串，float() 将其转换为浮点数，支持小数。赋值给变量 score。
+
+
+# 5. 将成绩添加到列表 scores 中
+scores.append(score)
+scores.append(score) 将 score 这个值追加到列表 scores 的末尾。
+
+
+# 6. 循环结束后，列表 scores 里就有了所有成绩
+# 7. 计算总分
+total = sum(scores)
+sum(scores) 是 Python 内置函数，可以对列表中的所有数字求和。结果赋值给 total。
+
+
+# 8. 计算平均分
+average = total / n
+平均分 = 总分 ÷ 人数。
+
+
+# 9. 找最高分和最低分
+max_score = max(scores)
+min_score = min(scores)
+max() 和 min() 分别返回列表中的最大值和最小值。
+
+
+# 10. 根据平均分评定等级
+if average >= 90:
+    grade = "优秀"
+elif average >= 75:
+    grade = "良好"
+elif average >= 60:
+    grade = "及格"
+else:
+    grade = "不及格"
+这是多分支条件判断，从上到下依次判断，只要满足一个就执行对应的赋值，然后跳过剩下的 elif。
+
+
+# 11. 输出报告
+print("\n===== 成绩分析报告 =====")
+print(f"学生人数：{n}")
+print(f"总分：{total}")
+print(f"平均分：{average:.2f}")
+print(f"最高分：{max_score}")
+print(f"最低分：{min_score}")
+print(f"班级等级：{grade}")
+\n 表示换行。
+
+f"平均分：{average:.2f}" 中的 :.2f 表示保留两位小数。
+
