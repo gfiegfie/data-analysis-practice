@@ -57,3 +57,35 @@ age = 10
 print(f"{name} is {age} years old.")  # 打印 Edward 的年龄
 print(f"{name.upper()} is {age} years old.")  # 打印 Edward 的名字大写形式和年龄
 print(f"{name.lower()} is {age} years old.")  # 打印 Edward 的名字小写形式和年龄
+print()
+print("Languages:\nPython\nC\nJavaScript")
+print()
+favortite_language = "Python "
+print(favortite_language.rstrip())  # rstrip()方法用于去除字符串末尾的空格
+print(favortite_language)  # 原字符串未改变
+print(favortite_language.lstrip())  # lstrip()方法用于去除字符串开头的空格
+print(favortite_language)  # 原字符串未改变
+print(favortite_language.strip())  # strip()方法用于去除字符串两端的空格
+favortite_language = "Python"
+favortite_language = favortite_language.strip()
+print(favortite_language)  # 原字符串已被修改
+favortite_language = "Python "
+print(favortite_language.strip())  # strip()方法去除两端的空格
+print(favortite_language.lstrip())  # 原字符串未改变
+print(favortite_language.rstrip())  # 原字符串未改变
+print()
+nostarch_url = "https://nostarch.com"
+print(
+    nostarch_url.removeprefix("https://")
+)  # removeprefix()方法用于去除字符串开头的指定前缀
+print(nostarch_url.removesuffix("/"))  # removesuffix()方法用于去除字符串结尾的指定后缀
+print()
+"""
+lstrip()：左去除 – 只删除字符串开头（左侧）的指定字符。
+
+rstrip()：右去除 – 只删除字符串结尾（右侧）的指定字符。
+
+strip()：两端去除 – 同时删除开头和结尾的指定字符。
+
+注意：这三个方法都只会删除字符串中出现的指定字符，不会影响字符串的其他部分。
+"""
